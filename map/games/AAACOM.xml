@@ -1006,22 +1006,18 @@
   </resourceList>
   <playerList>
     <!-- Player Turn Order -->
-    <player name="Americans" optional="false"/>
-    <player name="Russians" optional="false"/>
-    <player name="Germans" optional="false"/>
-    <player name="British" optional="false"/>
-    <player name="Italians" optional="false"/>
-    <player name="Chinese" optional="false"/>
-    <player name="Japanese" optional="false"/>
-    <!-- Axis Alliance -->
+    <player name="XCOM" optional="false
+    <player name="Aliens" optional="false"/>
+    <!-- Axis Alliance 
     <alliance player="Germans" alliance="Axis"/>
     <alliance player="Italians" alliance="Axis"/>
     <alliance player="Japanese" alliance="Axis"/>
-    <!-- Allied Alliance -->
+    <!-- Allied Alliance 
     <alliance player="British" alliance="Allies"/>
     <alliance player="Russians" alliance="Allies"/>
-    <alliance player="Americans" alliance="Allies"/>
+    <alliance player="Xcom" alliance="Allies"/>
     <alliance player="Chinese" alliance="Allies"/>
+	-->
   </playerList>
   <unitList>
     <unit name="infantry"/>
@@ -1078,33 +1074,22 @@
       <step name="gameInitDelegate" delegate="initDelegate" maxRunCount="1"/>
       <step name="OptionsSettingNonCombatMove" delegate="move" player="Russians" display="Setting Options" maxRunCount="1"/>
       <!-- Bidding Phase -->
-      <step name="russianBid" delegate="bid" player="Russians" maxRunCount="1"/>
-      <step name="russianBidPlace" delegate="placeBid" player="Russians" maxRunCount="1"/>
-      <step name="germanBid" delegate="bid" player="Germans" maxRunCount="1"/>
-      <step name="germanBidPlace" delegate="placeBid" player="Germans" maxRunCount="1"/>
-      <step name="britishBid" delegate="bid" player="British" maxRunCount="1"/>
-      <step name="britishBidPlace" delegate="placeBid" player="British" maxRunCount="1"/>
-      <step name="italianBid" delegate="bid" player="Italians" maxRunCount="1"/>
-      <step name="italianBidPlace" delegate="placeBid" player="Italians" maxRunCount="1"/>
-      <step name="chineseBid" delegate="bid" player="Chinese" maxRunCount="1"/>
-      <step name="chineseBidPlace" delegate="placeBid" player="Chinese" maxRunCount="1"/>
-      <step name="japaneseBid" delegate="bid" player="Japanese" maxRunCount="1"/>
-      <step name="japaneseBidPlace" delegate="placeBid" player="Japanese" maxRunCount="1"/>
-      <step name="americanBid" delegate="bid" player="Americans" maxRunCount="1"/>
-      <step name="americanBidPlace" delegate="placeBid" player="Americans" maxRunCount="1"/>
-      <!-- Americans Game Sequence -->
-      <step name="americanPolitics" delegate="politics" player="Americans"/>
-      <step name="americanTech" delegate="tech" player="Americans"/>
-      <step name="americanPurchase" delegate="purchase" player="Americans"/>
-      <step name="americanCombatMove" delegate="move" player="Americans"/>
-      <step name="americanBattle" delegate="battle" player="Americans"/>
-      <step name="americanNonCombatMove" delegate="move" player="Americans" display="Non Combat Move"/>
-      <step name="americanPlace" delegate="place" player="Americans"/>
-      <step name="americanTechActivation" delegate="tech_activation" player="Americans"/>
-      <step name="americanEndTurn" delegate="endTurn" player="Americans"/>
-      <!-- End Round -->
-      <step name="endRoundStep" delegate="endRound"/>
-      <!-- Russians Game Sequence -->
+      <step name="alienBid" delegate="bid" player="Russians" maxRunCount="1"/>
+      <step name="alienBidPlace" delegate="placeBid" player="Russians" maxRunCount="1"/>
+      <step name="xcomBid" delegate="bid" player="Xcom" maxRunCount="1"/>
+      <step name="xcomBidPlace" delegate="placeBid" player="Xcom" maxRunCount="1"/>
+      <!-- Xcom Game Sequence -->
+      <step name="xcomPolitics" delegate="politics" player="XCom"/>
+      <step name="xcomTech" delegate="tech" player="XCom"/>
+      <step name="xcomPurchase" delegate="purchase" player="XCom"/>
+      <step name="xcomCombatMove" delegate="move" player="XCom"/>
+      <step name="xcomBattle" delegate="battle" player="XCom"/>
+      <step name="xcomNonCombatMove" delegate="move" player="XCom" display="Non Combat Move"/>
+      <step name="xcomPlace" delegate="place" player="XCom"/>
+      <step name="xcomTechActivation" delegate="tech_activation" player="XCom"/>
+      <step name="xcomEndTurn" delegate="endTurn" player="XCom"/>
+
+      <!-- Russians Game Sequence --
       <step name="russiansPolitics" delegate="politics" player="Russians"/>
       <step name="russianTech" delegate="tech" player="Russians"/>
       <step name="russianPurchase" delegate="purchase" player="Russians"/>
@@ -1114,17 +1099,17 @@
       <step name="russianPlace" delegate="place" player="Russians"/>
       <step name="russianTechActivation" delegate="tech_activation" player="Russians"/>
       <step name="russianEndTurn" delegate="endTurn" player="Russians"/>
-      <!-- Germans Game Sequence -->
-      <step name="germanPolitics" delegate="politics" player="Germans"/>
-      <step name="germanTech" delegate="tech" player="Germans"/>
-      <step name="germanPurchase" delegate="purchase" player="Germans"/>
-      <step name="germanCombatMove" delegate="move" player="Germans"/>
-      <step name="germanBattle" delegate="battle" player="Germans"/>
-      <step name="germanNonCombatMove" delegate="move" player="Germans" display="Non Combat Move"/>
-      <step name="germanPlace" delegate="place" player="Germans"/>
-      <step name="germanTechActivation" delegate="tech_activation" player="Germans"/>
-      <step name="germanEndTurn" delegate="endTurn" player="Germans"/>
-      <!-- British Game Sequence -->
+      <!-- Alien Game Sequence -->
+      <step name="alienPolitics" delegate="politics" player="Aliens"/>
+      <step name="alienTech" delegate="tech" player="Aliens"/>
+      <step name="alienPurchase" delegate="purchase" player="Aliens"/>
+      <step name="alienCombatMove" delegate="move" player="Aliens"/>
+      <step name="alienBattle" delegate="battle" player="Aliens"/>
+      <step name="alienNonCombatMove" delegate="move" player="Aliens" display="Non Combat Move"/>
+      <step name="alienPlace" delegate="place" player="Aliens"/>
+      <step name="alienTechActivation" delegate="tech_activation" player="Aliens"/>
+      <step name="alienEndTurn" delegate="endTurn" player="Aliens"/>
+      <!-- British Game Sequence --
       <step name="britishPolitics" delegate="politics" player="British"/>
       <step name="britishTech" delegate="tech" player="British"/>
       <step name="britishPurchase" delegate="purchase" player="British"/>
@@ -1134,7 +1119,7 @@
       <step name="britishPlace" delegate="place" player="British"/>
       <step name="britishTechActivation" delegate="tech_activation" player="British"/>
       <step name="britishEndTurn" delegate="endTurn" player="British"/>
-      <!-- Italians Game Sequence -->
+      <!-- Italians Game Sequence --
       <step name="italianPolitics" delegate="politics" player="Italians"/>
       <step name="italianTech" delegate="tech" player="Italians"/>
       <step name="italianPurchase" delegate="purchase" player="Italians"/>
@@ -1144,7 +1129,7 @@
       <step name="italianPlace" delegate="place" player="Italians"/>
       <step name="italianTechActivation" delegate="tech_activation" player="Italians"/>
       <step name="italianEndTurn" delegate="endTurn" player="Italians"/>
-      <!-- Chinese Game Sequence -->
+      <!-- Chinese Game Sequence --
       <step name="chinesePolitics" delegate="politics" player="Chinese"/>
       <step name="chineseTech" delegate="tech" player="Chinese"/>
       <step name="chinesePurchase" delegate="purchase" player="Chinese"/>
@@ -1155,7 +1140,7 @@
       <step name="chinesePlace" delegate="place" player="Chinese"/>
       <step name="chineseTechActivation" delegate="tech_activation" player="Chinese"/>
       <step name="chineseEndTurn" delegate="endTurn" player="Chinese"/>
-      <!-- Japanese Game Sequence -->
+      <!-- Japanese Game Sequence --
       <step name="japanesePolitics" delegate="politics" player="Japanese"/>
       <step name="japaneseTech" delegate="tech" player="Japanese"/>
       <step name="japanesePurchase" delegate="purchase" player="Japanese"/>
@@ -1164,7 +1149,9 @@
       <step name="japaneseNonCombatMove" delegate="move" player="Japanese" display="Non Combat Move"/>
       <step name="japanesePlace" delegate="place" player="Japanese"/>
       <step name="japaneseTechActivation" delegate="tech_activation" player="Japanese"/>
-      <step name="japaneseEndTurn" delegate="endTurn" player="Japanese"/>
+      <step name="japaneseEndTurn" delegate="endTurn" player="Japanese"/>-->
+	       <!-- End Round -->
+      <step name="endRoundStep" delegate="endRound"/>
 
     </sequence>
   </gamePlay>
@@ -1425,7 +1412,7 @@
       <frontierRules name="buyCruiserShipyards"/>
       <frontierRules name="buyBattleshipShipyards"/>
     </productionFrontier>
-    <productionFrontier name="Americans_Super_Carrier_production">
+    <productionFrontier name="xcom_Super_Carrier_production">
       <frontierRules name="buyInfantry"/>
       <frontierRules name="buyArtillery"/>
       <frontierRules name="buyArmour"/>
@@ -1445,7 +1432,7 @@
       <frontierRules name="buyAAGun"/>
       <frontierRules name="buyFactory"/>
     </productionFrontier>
-    <productionFrontier name="Americans_Super_Carrier_productionShipyards">
+    <productionFrontier name="xcom_Super_Carrier_productionShipyards">
       <frontierRules name="buyInfantry"/>
       <frontierRules name="buyArtillery"/>
       <frontierRules name="buyArmour"/>
@@ -1465,20 +1452,20 @@
       <frontierRules name="buyAAGun"/>
       <frontierRules name="buyFactory"/>
     </productionFrontier>
-    <playerProduction player="Germans" frontier="production"/>
+    <playerProduction player="XCOM" frontier="production"/>
     <playerProduction player="Russians" frontier="production"/>
     <playerProduction player="Japanese" frontier="production"/>
     <playerProduction player="British" frontier="production"/>
     <playerProduction player="Italians" frontier="production"/>
     <playerProduction player="Chinese" frontier="production"/>
-    <playerProduction player="Americans" frontier="production"/>
+    <playerProduction player="Xcom" frontier="production"/>
     <playerRepair player="Germans" frontier="repair"/>
     <playerRepair player="Russians" frontier="repair"/>
     <playerRepair player="Japanese" frontier="repair"/>
     <playerRepair player="British" frontier="repair"/>
     <playerRepair player="Italians" frontier="repair"/>
     <playerRepair player="Chinese" frontier="repair"/>
-    <playerRepair player="Americans" frontier="repair"/>
+    <playerRepair player="Xcom" frontier="repair"/>
   </production>
   <technology>
     <!-- list all available techs for this map, for all players possible -->
@@ -1671,7 +1658,7 @@
         <tech name="warBonds"/>
       </category>
     </playerTech>
-    <playerTech player="Americans">
+    <playerTech player="Xcom">
       <category name="Air Advances">
         <tech name="jetPower"/>
         <tech name="longRangeAir"/>
@@ -1849,10 +1836,10 @@
       <option name="support" value="supportAttachmentimprovedArtillery_Support"/>
       <option name="uses" value="1"/>
     </attachment>
-    <attachment name="ImprovedArtillery_Condition_A" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+    <attachment name="ImprovedArtillery_Condition_A" attachTo="Xcom" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="techs" value="improvedArtillerySupport" count="1"/>
     </attachment>
-    <attachment name="ImprovedArtillery_Action_A" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+    <attachment name="ImprovedArtillery_Action_A" attachTo="Xcom" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="ImprovedArtillery_Condition_A"/>
       <option name="support" value="supportAttachmentimprovedArtillery_Support"/>
       <option name="uses" value="1"/>
@@ -2020,32 +2007,32 @@
       <option name="unitProperty" value="bombard" count="4"/>
       <option name="when" value="after:japanesePlace"/>
     </attachment>
-    <attachment name="Improved_Bombard_Condition_A" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+    <attachment name="Improved_Bombard_Condition_A" attachTo="XCom" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="techs" value="Improved_Bombard" count="1"/>
     </attachment>
-    <attachment name="Improved_Bombard_Action_A_1" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+    <attachment name="Improved_Bombard_Action_A_1" attachTo="XCom" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="Improved_Bombard_Condition_A"/>
       <option name="unitType" value="cruiser"/>
       <option name="unitProperty" value="bombard" count="4"/>
-      <option name="when" value="before:americanPurchase"/>
+      <option name="when" value="before:xcomPurchase"/>
     </attachment>
-    <attachment name="Improved_Bombard_Action_A_2" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+    <attachment name="Improved_Bombard_Action_A_2" attachTo="XCom" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="Improved_Bombard_Condition_A"/>
       <option name="unitType" value="battleship"/>
       <option name="unitProperty" value="bombard" count="5"/>
-      <option name="when" value="before:americanPurchase"/>
+      <option name="when" value="before:xcomPurchase"/>
     </attachment>
-    <attachment name="Improved_Bombard_Action_A_3" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+    <attachment name="Improved_Bombard_Action_A_3" attachTo="XCom" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="Improved_Bombard_Condition_A"/>
       <option name="unitType" value="cruiser"/>
       <option name="unitProperty" value="bombard" count="3"/>
-      <option name="when" value="after:americanPlace"/>
+      <option name="when" value="after:xcomPlace"/>
     </attachment>
-    <attachment name="Improved_Bombard_Action_A_4" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+    <attachment name="Improved_Bombard_Action_A_4" attachTo="XCom" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="Improved_Bombard_Condition_A"/>
       <option name="unitType" value="battleship"/>
       <option name="unitProperty" value="bombard" count="4"/>
-      <option name="when" value="after:americanPlace"/>
+      <option name="when" value="after:xcomPlace"/>
     </attachment>
     <!-- Propaganda-->
     <attachment name="Propaganda_Condition_R" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
@@ -2096,13 +2083,13 @@
       <option name="placement" value="Southern Japan:infantry:infantry:infantry"/>
       <option name="when" value="after:japanesePlace"/>
     </attachment>
-    <attachment name="Propaganda_Condition_A" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+    <attachment name="Propaganda_Condition_A" attachTo="XCom" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="techs" value="Propaganda" count="1"/>
     </attachment>
-    <attachment name="Propaganda_Action_A" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+    <attachment name="Propaganda_Action_A" attachTo="XCom" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="Propaganda_Condition_A"/>
       <option name="placement" value="Northeastern United States:infantry:infantry:infantry"/>
-      <option name="when" value="after:americanPlace"/>
+      <option name="when" value="after:xcomPlace"/>
     </attachment>
     <!-- Tech costs -->
     <!-- Germans -->
@@ -2129,8 +2116,8 @@
     <attachment name="techAttachment" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
       <option name="techCost" value="10"/>
     </attachment>
-    <!-- Americans -->
-    <attachment name="techAttachment" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
+    <!-- XCom -->
+    <attachment name="techAttachment" attachTo="XCom" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
       <option name="techCost" value="4"/>
     </attachment>
     <!--  relationshipType Attachments -->
@@ -2656,7 +2643,7 @@
     </attachment>
     <attachment name="territoryAttachment" attachTo="South Philippines" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="2"/>
-      <option name="originalOwner" value="Americans"/>
+      <option name="originalOwner" value="Xcom"/>
     </attachment>
     <attachment name="territoryAttachment" attachTo="Southern Africa" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="2"/>
@@ -2782,7 +2769,7 @@
     <attachment name="territoryAttachment" attachTo="Northeastern United States" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="12"/>
       <option name="unitProduction" value="12"/>
-      <option name="capital" value="Americans"/>
+      <option name="capital" value="Xcom"/>
       <option name="victoryCity" value="1"/>
     </attachment>
     <attachment name="territoryAttachment" attachTo="Western Sinkiang" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2814,7 +2801,7 @@
     </attachment>
     <attachment name="territoryAttachment" attachTo="North Philippines" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="2"/>
-      <option name="originalOwner" value="Americans"/>
+      <option name="originalOwner" value="Xcom"/>
       <option name="victoryCity" value="1"/>
     </attachment>
     <attachment name="territoryAttachment" attachTo="Western Balkans" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -3059,24 +3046,24 @@
       <option name="objectiveValue" value="5"/>
       <option name="alliedOwnershipTerritories" value="Northern Manchukuo:Chosen:Shantung:Kwangtung" count="4"/>
     </attachment>
-    <!-- American Objectives -->
-    <attachment name="objectiveAttachment1" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+    <!-- Xcom Objectives -->
+    <attachment name="objectiveAttachment1" attachTo="Xcom" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="objectiveValue" value="5"/>
       <option name="alliedOwnershipTerritories" value="France:Vichy France" count="2"/>
     </attachment>
-    <attachment name="objectiveAttachment2" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+    <attachment name="objectiveAttachment2" attachTo="Xcom" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="objectiveValue" value="5"/>
       <option name="alliedOwnershipTerritories" value="North Philippines:South Philippines" count="2"/>
     </attachment>
-    <attachment name="objectiveAttachment3" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+    <attachment name="objectiveAttachment3" attachTo="Xcom" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="objectiveValue" value="5"/>
       <option name="alliedOwnershipTerritories" value="Northwestern United States:Northeastern United States:Southwestern United States:Southern United States:Midwestern United States" count="5"/>
     </attachment>
-    <attachment name="objectiveAttachment4" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+    <attachment name="objectiveAttachment4" attachTo="Xcom" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="objectiveValue" value="5"/>
       <option name="alliedOwnershipTerritories" value="Midway Island:Wake:Hawaiian Islands:Solomon Islands:Marshall Islands:Guam:New Guinea:Gilbert Islands" count="6"/>
     </attachment>
-    <attachment name="objectiveAttachment5" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+    <attachment name="objectiveAttachment5" attachTo="Xcom" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="objectiveValue" value="5"/>
       <option name="alliedOwnershipTerritories" value="Morocco:Algeria:Libya:Egypt:Sicily" count="5"/>
     </attachment>
@@ -3116,7 +3103,7 @@
       <option name="number" value="1"/>
       <option name="bonusType" value="Mechanized"/>
       <option name="impArtTech" value="true"/>
-      <option name="players" value="Germans:Russians:Americans:British:Italians:Japanese:Chinese"/>
+      <option name="players" value="Germans:Russians:Xcom:British:Italians:Japanese:Chinese"/>
     </attachment>
     <!-- Initializing setting options -->
     <!-- Ristrict movement during OptionsSettingNonCombatMove -->
@@ -3152,14 +3139,14 @@
       <option name="productionRule" value="productionShipyards:buyTransportShipyards_revised_rules"/>
       <option name="productionRule" value="productionShipyards:-buySubmarineShipyards"/>
       <option name="productionRule" value="productionShipyards:buySubmarineShipyards_revised_rules"/>
-      <option name="productionRule" value="Americans_Super_Carrier_production:-buyTransport"/>
-      <option name="productionRule" value="Americans_Super_Carrier_production:buyTransport_revised_rules"/>
-      <option name="productionRule" value="Americans_Super_Carrier_production:-buySubmarine"/>
-      <option name="productionRule" value="Americans_Super_Carrier_production:buySubmarine_revised_rules"/>
-      <option name="productionRule" value="Americans_Super_Carrier_productionShipyards:-buyTransportShipyards"/>
-      <option name="productionRule" value="Americans_Super_Carrier_productionShipyards:buyTransportShipyards_revised_rules"/>
-      <option name="productionRule" value="Americans_Super_Carrier_productionShipyards:-buySubmarineShipyards"/>
-      <option name="productionRule" value="Americans_Super_Carrier_productionShipyards:buySubmarineShipyards_revised_rules"/>
+      <option name="productionRule" value="Xcom_Super_Carrier_production:-buyTransport"/>
+      <option name="productionRule" value="Xcom_Super_Carrier_production:buyTransport_revised_rules"/>
+      <option name="productionRule" value="Xcom_Super_Carrier_production:-buySubmarine"/>
+      <option name="productionRule" value="Xcom_Super_Carrier_production:buySubmarine_revised_rules"/>
+      <option name="productionRule" value="Xcom_Super_Carrier_productionShipyards:-buyTransportShipyards"/>
+      <option name="productionRule" value="Xcom_Super_Carrier_productionShipyards:buyTransportShipyards_revised_rules"/>
+      <option name="productionRule" value="Xcom_Super_Carrier_productionShipyards:-buySubmarineShipyards"/>
+      <option name="productionRule" value="Xcom_Super_Carrier_productionShipyards:buySubmarineShipyards_revised_rules"/>
       <option name="unitType" value="transport"/>
       <option name="unitProperty" value="isCombatTransport" count="true"/>
       <option name="unitProperty" value="defense" count="1"/>
@@ -3177,18 +3164,18 @@
       <option name="placement" value="SZ 4 Denmark Straight:cruiser"/>
       <option name="when" value="after:OptionsSettingNonCombatMove"/>
     </attachment>
-    <attachment name="v3_transport_and_sub_rules_action_A" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+    <attachment name="v3_transport_and_sub_rules_action_A" attachTo="Xcom" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="v3_transport_and_sub_rules_No_Condition"/>
       <option name="removeUnits" value="SZ 106 Southwest Pacific:submarine"/>
       <option name="removeUnits" value="SZ 91 East Pacific:destroyer"/>
       <option name="placement" value="SZ 88 Pacific:transport"/>
       <option name="when" value="after:OptionsSettingNonCombatMove"/>
     </attachment>
-    <!-- National Advantages -->
+    <!-- National Advantages --
     <attachment name="National_Advantages_Yes_Condition" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="alliedPresenceTerritories" value="National_Advantages_Yes" count="1"/>
     </attachment>
-    <!-- Russian Advantages -->
+    <!-- Russian Advantages --
     <attachment name="Russian_Winter_Add" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="National_Advantages_Yes_Condition"/>
       <option name="placement" value="Siberia:winter"/>
@@ -3197,7 +3184,7 @@
     </attachment>
     <attachment name="Russian_Winter_Condition" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="directPresenceTerritories" value="Western Siberia:Southwestern Siberia:Southern Siberia:Southeastern Siberia:Yakutsk:Eastern Siberia" count="1"/>
-      <!-- any land unit includes aaGuns but does not include 'facilities' -->
+      <!-- any land unit includes aaGuns but does not include 'facilities' --
       <option name="unitPresence" value="winter" count="1"/>
     </attachment>
     <attachment name="Russian_Winter_Action" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
@@ -3215,36 +3202,8 @@
       <option name="removeUnits" value="all:winter" count="1"/>
       <option name="uses" value="1"/>
       <option name="when" value="before:russiansPolitics"/>
-    </attachment>
-    <!-- Japanese Neutrality is handled by politics -->
-    <attachment name="Ukrainian_Front_Condition" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-      <option name="directOwnershipTerritories" value="Ukraine" count="1"/>
-    </attachment>
-    <attachment name="Belorussian_Front_Condition" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-      <option name="directOwnershipTerritories" value="Belorussia" count="1"/>
-    </attachment>
-    <attachment name="Baltic_Front_Condition" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-      <option name="directOwnershipTerritories" value="Baltic States" count="1"/>
-    </attachment>
-    <attachment name="Ukrainian_Front_Action" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-      <option name="conditions" value="Ukrainian_Front_Condition:National_Advantages_Yes_Condition"/>
-      <option name="conditionType" value="AND"/>
-      <option name="placement" value="Ukraine:infantry"/>
-      <option name="when" value="after:russianPlace"/>
-    </attachment>
-    <attachment name="Belorussian_Front_Action" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-      <option name="conditions" value="Belorussian_Front_Condition:National_Advantages_Yes_Condition"/>
-      <option name="conditionType" value="AND"/>
-      <option name="placement" value="Belorussia:infantry"/>
-      <option name="when" value="after:russianPlace"/>
-    </attachment>
-    <attachment name="Baltic_Front_Action" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-      <option name="conditions" value="Baltic_Front_Condition:National_Advantages_Yes_Condition"/>
-      <option name="conditionType" value="AND"/>
-      <option name="placement" value="Baltic States:infantry"/>
-      <option name="when" value="after:russianPlace"/>
-    </attachment>
-    <!-- German Advantages -->
+    </attachment>--
+    <!-- German Advantages --
     <attachment name="Germany_Holds_Ruhr_Condition" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="directOwnershipTerritories" value="Western Germany" count="1"/>
     </attachment>
@@ -3267,7 +3226,7 @@
       <option name="uses" value="1"/>
       <option name="when" value="after:germanPlace"/>
     </attachment>
-    <!-- British Advantages -->
+    <!-- British Advantages --
     <attachment name="Naval_Dominance_Action" attachTo="British" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="National_Advantages_Yes_Condition"/>
       <option name="tech" value="shipyards"/>
@@ -3278,7 +3237,7 @@
       <option name="tech" value="aARadar"/>
       <option name="when" value="after:OptionsSettingNonCombatMove"/>
     </attachment>
-    <!-- Japanese Advantages -->
+    <!-- Japanese Advantages --
     <attachment name="Decisive_Battlefleet_Action1" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="National_Advantages_Yes_Condition"/>
       <option name="tech" value="battlefleet"/>
@@ -3334,59 +3293,59 @@
       <option name="placement" value="SZ 73 East China Sea:kamikaze:kamikaze"/>
       <option name="when" value="after:japanesePlace"/>
     </attachment>
-    <!-- American Advantages -->
-    <attachment name="Super_Carriers_Action" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+    <!-- Xcom Advantages --
+    <attachment name="Super_Carriers_Action" attachTo="Xcom" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="National_Advantages_Yes_Condition"/>
-      <option name="frontier" value="Americans_Super_Carrier_production"/>
+      <option name="frontier" value="Xcom_Super_Carrier_production"/>
       <option name="when" value="after:OptionsSettingNonCombatMove"/>
     </attachment>
-    <attachment name="Heavy_Bomber_Action" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+    <attachment name="Heavy_Bomber_Action" attachTo="Xcom" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="National_Advantages_Yes_Condition"/>
       <option name="tech" value="heavyBomber"/>
       <option name="when" value="after:OptionsSettingNonCombatMove"/>
     </attachment>
-    <attachment name="Technological_Advance_Action" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+    <attachment name="Technological_Advance_Action" attachTo="Xcom" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="Round_1_or_later:National_Advantages_Yes_Condition"/>
       <option name="conditionType" value="AND"/>
       <option name="resource" value="techTokens"/>
       <option name="resourceCount" value="1"/>
-      <option name="when" value="before:americanTech"/>
+      <option name="when" value="before:xcomTech"/>
     </attachment>
-    <attachment name="War_Economy_1x_Action" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+    <attachment name="War_Economy_1x_Action" attachTo="Xcom" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="Round_1_or_later:National_Advantages_Yes_Condition"/>
       <option name="conditionType" value="AND"/>
       <option name="resource" value="PUs"/>
       <option name="resourceCount" value="2"/>
-      <option name="when" value="after:americanPlace"/>
+      <option name="when" value="after:xcomPlace"/>
     </attachment>
-    <attachment name="War_Economy_2x_Action" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+    <attachment name="War_Economy_2x_Action" attachTo="Xcom" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="Round_2_or_later:National_Advantages_Yes_Condition"/>
       <option name="conditionType" value="AND"/>
       <option name="resource" value="PUs"/>
       <option name="resourceCount" value="2"/>
-      <option name="when" value="after:americanPlace"/>
+      <option name="when" value="after:xcomPlace"/>
     </attachment>
-    <attachment name="War_Economy_3x_Action" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+    <attachment name="War_Economy_3x_Action" attachTo="Xcom" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="Round_3_or_later:National_Advantages_Yes_Condition"/>
       <option name="conditionType" value="AND"/>
       <option name="resource" value="PUs"/>
       <option name="resourceCount" value="2"/>
-      <option name="when" value="after:americanPlace"/>
+      <option name="when" value="after:xcomPlace"/>
     </attachment>
-    <attachment name="War_Economy_4x_Action" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+    <attachment name="War_Economy_4x_Action" attachTo="Xcom" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="Round_4_or_later:National_Advantages_Yes_Condition"/>
       <option name="conditionType" value="AND"/>
       <option name="resource" value="PUs"/>
       <option name="resourceCount" value="2"/>
-      <option name="when" value="after:americanPlace"/>
+      <option name="when" value="after:xcomPlace"/>
     </attachment>
-    <attachment name="War_Economy_5x_Action" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+    <attachment name="War_Economy_5x_Action" attachTo="Xcom" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="conditions" value="Round_5_or_later:National_Advantages_Yes_Condition"/>
       <option name="conditionType" value="AND"/>
       <option name="resource" value="PUs"/>
       <option name="resourceCount" value="2"/>
-      <option name="when" value="after:americanPlace"/>
-    </attachment>
+      <option name="when" value="after:xcomPlace"/>
+    </attachment>-->
     <!-- Political related conditions -->
     <attachment name="Soviet-Japanese_Neutrality" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="relationship" value="Russians:Japanese:Neutrality"/>
@@ -3416,7 +3375,7 @@
       <option name="conditionType" value="AND"/>
       <option name="relationshipChange" value="Russians:Japanese:War:Neutrality"/>
       <option name="relationshipChange" value="Russians:British:Allied:Friendly"/>
-      <option name="relationshipChange" value="Russians:Americans:Allied:Friendly"/>
+      <option name="relationshipChange" value="Russians:Xcom:Allied:Friendly"/>
       <option name="relationshipChange" value="Russians:Chinese:Allied:Friendly"/>
       <option name="when" value="before:russiansPolitics"/>
       <option name="uses" value="1"/>
@@ -3436,7 +3395,7 @@
     <attachment name="politicalActionAttachment_Soviet-Western_Alliance" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
       <option name="conditions" value="Soviet-Western_Friendship"/>
       <option name="relationshipChange" value="Russians:British:Allied"/>
-      <option name="relationshipChange" value="Russians:Americans:Allied"/>
+      <option name="relationshipChange" value="Russians:Xcom:Allied"/>
       <option name="relationshipChange" value="Russians:Chinese:Allied"/>
       <option name="text" value="Soviet-Western_Alliance"/>
     </attachment>
@@ -3562,26 +3521,26 @@
       <territoryOwner territory="Malay" owner="Japanese"/>
       <territoryOwner territory="Taiwan" owner="Japanese"/>
       <territoryOwner territory="Gilbert Islands" owner="Japanese"/>
-      <!-- Americans Owned Territories -->
-      <territoryOwner territory="Southwestern United States" owner="Americans"/>
-      <territoryOwner territory="Greenland" owner="Americans"/>
-      <territoryOwner territory="Alaska" owner="Americans"/>
-      <territoryOwner territory="Northern Brazil" owner="Americans"/>
-      <territoryOwner territory="Southern Brazil" owner="Americans"/>
-      <territoryOwner territory="Hawaiian Islands" owner="Americans"/>
-      <territoryOwner territory="West Indies" owner="Americans"/>
-      <territoryOwner territory="Iceland" owner="Americans"/>
-      <territoryOwner territory="Midwestern United States" owner="Americans"/>
-      <territoryOwner territory="Midway Island" owner="Americans"/>
-      <territoryOwner territory="Fiji" owner="Americans"/>
-      <territoryOwner territory="Eastern Aleutian Islands" owner="Americans"/>
-      <territoryOwner territory="Southern United States" owner="Americans"/>
-      <territoryOwner territory="Northeastern United States" owner="Americans"/>
-      <territoryOwner territory="Cuba" owner="Americans"/>
-      <territoryOwner territory="Eastern Mexico" owner="Americans"/>
-      <territoryOwner territory="Central America" owner="Americans"/>
-      <territoryOwner territory="Western Mexico" owner="Americans"/>
-      <territoryOwner territory="Northwestern United States" owner="Americans"/>
+      <!-- Xcom Owned Territories -->
+      <territoryOwner territory="Southwestern United States" owner="Xcom"/>
+      <territoryOwner territory="Greenland" owner="Xcom"/>
+      <territoryOwner territory="Alaska" owner="Xcom"/>
+      <territoryOwner territory="Northern Brazil" owner="Xcom"/>
+      <territoryOwner territory="Southern Brazil" owner="Xcom"/>
+      <territoryOwner territory="Hawaiian Islands" owner="Xcom"/>
+      <territoryOwner territory="West Indies" owner="Xcom"/>
+      <territoryOwner territory="Iceland" owner="Xcom"/>
+      <territoryOwner territory="Midwestern United States" owner="Xcom"/>
+      <territoryOwner territory="Midway Island" owner="Xcom"/>
+      <territoryOwner territory="Fiji" owner="Xcom"/>
+      <territoryOwner territory="Eastern Aleutian Islands" owner="Xcom"/>
+      <territoryOwner territory="Southern United States" owner="Xcom"/>
+      <territoryOwner territory="Northeastern United States" owner="Xcom"/>
+      <territoryOwner territory="Cuba" owner="Xcom"/>
+      <territoryOwner territory="Eastern Mexico" owner="Xcom"/>
+      <territoryOwner territory="Central America" owner="Xcom"/>
+      <territoryOwner territory="Western Mexico" owner="Xcom"/>
+      <territoryOwner territory="Northwestern United States" owner="Xcom"/>
       <!-- Chinese Owned Territories -->
       <territoryOwner territory="Inner Mongolia" owner="Chinese"/>
       <territoryOwner territory="Kansu" owner="Chinese"/>
@@ -3878,49 +3837,49 @@
       <unitPlacement unitType="infantry" territory="Okinawa" quantity="3" owner="Japanese"/>
       <unitPlacement unitType="infantry" territory="Celebes" quantity="2" owner="Japanese"/>
       <unitPlacement unitType="infantry" territory="Gilbert Islands" quantity="1" owner="Japanese"/>
-      <!-- Americans  Unit Placements -->
-      <unitPlacement unitType="transport" territory="SZ 18 West Atlantic" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="destroyer" territory="SZ 18 West Atlantic" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="cruiser" territory="SZ 18 West Atlantic" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="cruiser" territory="SZ 37 Caribbean Sea" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="fighter" territory="SZ 88 Pacific" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="tactical_bomber" territory="SZ 88 Pacific" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="submarine" territory="SZ 88 Pacific" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="destroyer" territory="SZ 88 Pacific" quantity="2" owner="Americans"/>
-      <unitPlacement unitType="cruiser" territory="SZ 88 Pacific" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="carrier" territory="SZ 88 Pacific" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="transport" territory="SZ 91 East Pacific" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="destroyer" territory="SZ 91 East Pacific" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="transport" territory="SZ 95 Pacific" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="destroyer" territory="SZ 95 Pacific" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="battleship" territory="SZ 96 Pacific" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="transport" territory="SZ 100 Pacific" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="cruiser" territory="SZ 100 Pacific" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="submarine" territory="SZ 106 Southwest Pacific" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="factory" territory="Southwestern United States" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="aaGun" territory="Southwestern United States" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="fighter" territory="Southwestern United States" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="bomber" territory="Southwestern United States" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="infantry" territory="Southwestern United States" quantity="2" owner="Americans"/>
-      <unitPlacement unitType="infantry" territory="Alaska" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="factory" territory="Hawaiian Islands" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="infantry" territory="Hawaiian Islands" quantity="2" owner="Americans"/>
-      <unitPlacement unitType="fighter" territory="Hawaiian Islands" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="fighter" territory="Iceland" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="factory" territory="Midwestern United States" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="artillery" territory="Midwestern United States" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="infantry" territory="Midway Island" quantity="2" owner="Americans"/>
-      <unitPlacement unitType="infantry" territory="Fiji" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="artillery" territory="Fiji" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="infantry" territory="Southern United States" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="factory" territory="Northeastern United States" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="aaGun" territory="Northeastern United States" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="infantry" territory="Northeastern United States" quantity="2" owner="Americans"/>
-      <unitPlacement unitType="armour" territory="Northeastern United States" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="bomber" territory="Northeastern United States" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="tactical_bomber" territory="Northeastern United States" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="infantry" territory="Central America" quantity="1" owner="Americans"/>
-      <unitPlacement unitType="infantry" territory="Northwestern United States" quantity="1" owner="Americans"/>
+      <!-- Xcom  Unit Placements -->
+      <unitPlacement unitType="transport" territory="SZ 18 West Atlantic" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="destroyer" territory="SZ 18 West Atlantic" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="cruiser" territory="SZ 18 West Atlantic" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="cruiser" territory="SZ 37 Caribbean Sea" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="fighter" territory="SZ 88 Pacific" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="tactical_bomber" territory="SZ 88 Pacific" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="submarine" territory="SZ 88 Pacific" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="destroyer" territory="SZ 88 Pacific" quantity="2" owner="Xcom"/>
+      <unitPlacement unitType="cruiser" territory="SZ 88 Pacific" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="carrier" territory="SZ 88 Pacific" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="transport" territory="SZ 91 East Pacific" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="destroyer" territory="SZ 91 East Pacific" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="transport" territory="SZ 95 Pacific" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="destroyer" territory="SZ 95 Pacific" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="battleship" territory="SZ 96 Pacific" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="transport" territory="SZ 100 Pacific" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="cruiser" territory="SZ 100 Pacific" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="submarine" territory="SZ 106 Southwest Pacific" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="factory" territory="Southwestern United States" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="aaGun" territory="Southwestern United States" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="fighter" territory="Southwestern United States" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="bomber" territory="Southwestern United States" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="infantry" territory="Southwestern United States" quantity="2" owner="Xcom"/>
+      <unitPlacement unitType="infantry" territory="Alaska" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="factory" territory="Hawaiian Islands" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="infantry" territory="Hawaiian Islands" quantity="2" owner="Xcom"/>
+      <unitPlacement unitType="fighter" territory="Hawaiian Islands" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="fighter" territory="Iceland" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="factory" territory="Midwestern United States" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="artillery" territory="Midwestern United States" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="infantry" territory="Midway Island" quantity="2" owner="Xcom"/>
+      <unitPlacement unitType="infantry" territory="Fiji" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="artillery" territory="Fiji" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="infantry" territory="Southern United States" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="factory" territory="Northeastern United States" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="aaGun" territory="Northeastern United States" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="infantry" territory="Northeastern United States" quantity="2" owner="Xcom"/>
+      <unitPlacement unitType="armour" territory="Northeastern United States" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="bomber" territory="Northeastern United States" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="tactical_bomber" territory="Northeastern United States" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="infantry" territory="Central America" quantity="1" owner="Xcom"/>
+      <unitPlacement unitType="infantry" territory="Northwestern United States" quantity="1" owner="Xcom"/>
       <!-- Chinese  Unit Placements -->
       <unitPlacement unitType="infantry" territory="Inner Mongolia" quantity="1" owner="Chinese"/>
       <unitPlacement unitType="factory" territory="Kansu" quantity="1" owner="Chinese"/>
@@ -3949,7 +3908,7 @@
     </unitInitialize>
     <resourceInitialize>
       <resourceGiven player="British" resource="PUs" quantity="45"/>
-      <resourceGiven player="Americans" resource="PUs" quantity="58"/>
+      <resourceGiven player="Xcom" resource="PUs" quantity="58"/>
       <resourceGiven player="Japanese" resource="PUs" quantity="44"/>
       <resourceGiven player="Chinese" resource="PUs" quantity="9"/>
       <resourceGiven player="Russians" resource="PUs" quantity="36"/>
@@ -3961,27 +3920,27 @@
       <resourceGiven player="British" resource="techTokens" quantity="0"/>
       <resourceGiven player="Italians" resource="techTokens" quantity="0"/>
       <resourceGiven player="Chinese" resource="techTokens" quantity="0"/>
-      <resourceGiven player="Americans" resource="techTokens" quantity="0"/>
+      <resourceGiven player="Xcom" resource="techTokens" quantity="0"/>
     </resourceInitialize>
     <relationshipInitialize>
       <relationship player1="Germans" player2="Russians" type="War" roundValue="1"/>
       <relationship player1="Germans" player2="Japanese" type="Allied" roundValue="1"/>
-      <relationship player1="Germans" player2="Americans" type="War" roundValue="1"/>
+      <relationship player1="Germans" player2="Xcom" type="War" roundValue="1"/>
       <relationship player1="Germans" player2="Chinese" type="War" roundValue="1"/>
       <relationship player1="Germans" player2="British" type="War" roundValue="1"/>
       <relationship player1="Germans" player2="Italians" type="Allied" roundValue="1"/>
       <relationship player1="Russians" player2="Japanese" type="War" roundValue="1"/>
-      <relationship player1="Russians" player2="Americans" type="Allied" roundValue="1"/>
+      <relationship player1="Russians" player2="Xcom" type="Allied" roundValue="1"/>
       <relationship player1="Russians" player2="Chinese" type="Allied" roundValue="1"/>
       <relationship player1="Russians" player2="British" type="Allied" roundValue="1"/>
       <relationship player1="Russians" player2="Italians" type="War" roundValue="1"/>
-      <relationship player1="Japanese" player2="Americans" type="War" roundValue="1"/>
+      <relationship player1="Japanese" player2="Xcom" type="War" roundValue="1"/>
       <relationship player1="Japanese" player2="Chinese" type="War" roundValue="1"/>
       <relationship player1="Japanese" player2="British" type="War" roundValue="1"/>
       <relationship player1="Japanese" player2="Italians" type="Allied" roundValue="1"/>
-      <relationship player1="Americans" player2="Chinese" type="Allied" roundValue="1"/>
-      <relationship player1="Americans" player2="British" type="Allied" roundValue="1"/>
-      <relationship player1="Americans" player2="Italians" type="War" roundValue="1"/>
+      <relationship player1="Xcom" player2="Chinese" type="Allied" roundValue="1"/>
+      <relationship player1="Xcom" player2="British" type="Allied" roundValue="1"/>
+      <relationship player1="Xcom" player2="Italians" type="War" roundValue="1"/>
       <relationship player1="Chinese" player2="British" type="Allied" roundValue="1"/>
       <relationship player1="Chinese" player2="Italians" type="War" roundValue="1"/>
       <relationship player1="British" player2="Italians" type="War" roundValue="1"/>
@@ -4008,7 +3967,7 @@
     <property name="Japanese bid" value="0" editable="true">
       <number min="0" max="1000"/>
     </property>
-    <property name="Americans bid" value="0" editable="true">
+    <property name="Xcom bid" value="0" editable="true">
       <number min="0" max="1000"/>
     </property>
     <!-- victory options -->
