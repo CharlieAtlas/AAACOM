@@ -1,4 +1,3 @@
 map_name: big_world_2
 games:
-- {game_name: 'Big World 2 : Balance of Power', file_name: Balance_of_Power.xml}
-- {game_name: 'Big World 2 : Rise of the Axis', file_name: Rise_of_the_Axis.xml}
+- {game_name: 'AAACOM', file_name: AAACOM.xml}
