@@ -1,19 +1,25 @@
-sectiod
-thinman
-floater
-drone
-mechtoid
-seeker
-heavy floater
-sectopod
+sectoid.          2/2/1 one event gets -1 att/def. one ally gets +1 att/def
+thinman.          4/2/1 two enemies get-1 att/def
+floater.          3/3/2
+drone.            1/1/1 3 allies get+1 att/def
+mechtoid.         6/6/1 2 hp. comes with 3 sectoids
+seeker.           2/2/2 first strike, can "submerge"
+heavy floater.    5/5/2
+sectopod.         10/10/1 3hp
 ethereal
-outsider
-chrysallid
-muton
-muton elite
-muton berserker
-cyberdisc
+outsider.         5/5/1
+chrysallid.       3/3/2 -2 att/def for 3 units
+muton.            5/5/1. +1 att/def for 2 allied mutons
+muton elite.      8/8/1 -2 att/def for an enemy
+muton berserker.  8/8/1 2hp
+cyberdisc.        
 sectoid commander
+
+
+scout 
+large scout
+abductor
+terror ship?
 
 
 Exalt
@@ -28,34 +34,40 @@ elite operative
 
 
 XCOM
-rookie
-assault
-sniper
-heavy
-support
-MEC 
-- Assault: Shock-Absorbent Armor - Damage received from enemies within 4 tiles is reduced by 33%.
-- Heavy - Body Shield - The nearest visible enemy suffers -20 Aim and cannot critically hit this unit.
-- Sniper: Platform Stability - Any shots taken without moving have +10 Aim and +10% critical chance.
-- Support: Distortion Field - Nearby allies in cover receive +10 Defense.
+rookie.     2/2/1
+assault.    6/4/2 2hp
+sniper.     5/5/1 first strike
+heavy.      4/4/1 1 enemy gets -2 attack or defense
+support.    3/3/1 2 rolls for attack and defence
+MEC all are 2hp. 7/7/2
+- Assault: Shock-Absorbent Armor - Damage received from enemies within 4 tiles is reduced by 33%.    +1hp
+- Heavy - Body Shield - The nearest visible enemy suffers -20 Aim and cannot critically hit this unit.  1 enemy gets -1 attack or defense
+- Sniper: Platform Stability - Any shots taken without moving have +10 Aim and +10% critical chance.    extra shot first round
+- Support: Distortion Field - Nearby allies in cover receive +10 Defense.    3 allies get+1 defense
 
-Shiv
-alloy shiv
-hover shiv
+Shiv         4/4/2
+alloy shiv.  5/5/2 +2 defense for allied unit
+hover shiv.  7/7/3
 
 sky ranger
 interceptors
 firestorm
 
-scientists
-engineers
+
 labs
-workshops
+workshops. change costs?
 
 
 Resources
+scientists - resources?
+engineers. - resources?
 money = PU
 alloys
 weapon fragments
 elerium
+
+other drops maybe 
+computers 
+power supplies
+corpses
 
